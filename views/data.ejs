@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Provider ID</th>
+            <th>Specialty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(row => { %>
+            <tr>
+                <td> <%= row.patient_id %> </td>
+                <td> <%= row.first_name %> </td>
+                <td> <%= row.last_name %> </td>
+                <td> <%= new Date(row.date_of_birth).toLocaleDateString() %> </td>
+                <td> <%= row.providers_id %> </td>
+                <td> <%= row.specialty %> </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
